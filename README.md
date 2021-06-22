@@ -66,7 +66,19 @@ yarn start
 
 Checkout it's behaviour by navigating on http://localhost:4200
 
-Notice module chunks being fetched while routing by looking into network inspection of browser's devtools.
+Notice JavaScript chunks being fetched while routing by looking into network inspection of browser's devtools. It also contains components styles that will be injected in the DOM.
+
+### Bonus: Pre-loading strategy
+
+You can also configure to automatically pre load modules to improve user experience by setting the strategy on routing module. This prevent users to have to wait for files to be downloaded when routed.
+
+```ts
+import { PreloadAllModules } from '@angular/router';
+
+RouterModule.forRoot(routes, {
+  preloadingStrategy: PreloadAllModules
+});
+```
 
 ## References
 

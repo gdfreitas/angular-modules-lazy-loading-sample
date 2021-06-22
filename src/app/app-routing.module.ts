@@ -18,10 +18,11 @@ const routes: Routes = [
   }
 ];
 
+const preloadEnabled = false;
+const routingConfig = preloadEnabled ? { preloadingStrategy: PreloadAllModules } : {};
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    preloadingStrategy: PreloadAllModules
-  })],
+  imports: [RouterModule.forRoot(routes, routingConfig)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
