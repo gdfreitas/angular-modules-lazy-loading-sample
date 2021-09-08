@@ -1,4 +1,4 @@
-# angular-modules-lazy-loading
+# angular-modules-lazy-loading-sample
 
 Setup lazy loading for routed components
 
